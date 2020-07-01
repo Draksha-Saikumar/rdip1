@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)http://cse02-iiith.vlabs.ac.in/exp9/simulation/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--Google Tag Manager--><script type="text/javascript" async="" src="./bug4_files/analytics.js.download"></script><script async="" src="./bug4_files/gtm.js.download"></script><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager-->
+		<link href="./bug4_files/recursion.css" rel="stylesheet" type="text/css">
+		<!-- &lt;link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'&gt; -->
+		<script src="./bug4_files/recursion.js.download"></script>
+		<title>Recursion</title>
+	</head>
+	<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+		<div id="header">Recursion ( Towers of Hanoi )</div>
+		<a href="http://cse02-iiith.vlabs.ac.in/exp9/index.html"><div class="vlabsIcon"></div></a>
+		<div class="inputDivision">
+			<div class="inputDivisionTitle"><div class="initializePic"></div><div class="initializeText">Initialize</div></div>
+			<div class="inputDivisionBody">
+				<div class="instructionText">Enter number of disks</div>
+				<input class="textField" id="input" placeholder="N" type="text" disabled="">
+				<button class="buttonDisable okButton" id="btnOk" disabled="">Ok</button>	
+				<div class="buttonHolder"><button class="buttonDisable startButton" id="btnStart" disabled="">Start</button><button class="button nextButton" id="btnNext">Next</button></div>
+			</div><!-- end of inputDivisionBody -->
+		</div><!-- end of inputDivision -->
+
+		<div class="executionDivision">
+			<div class="executionDivisionTitle"><div class="executionPic"></div><div class="executionText">Step Execution</div></div>
+			<div class="stepExecutionDisplay">
+				<div class="codeLayout" id="code">
+					<div id="line1" class="showDiv">void main () {</div>
+					<div id="line2" class="showDiv">int N;</div>
+					<div id="line3" class="showDiv">scanf ( " %d ", &amp;N );</div>
+					<div id="line4" class="showDiv">hanoi( 1, 2, 3, N );</div>
+					<div id="line5">}<br><br></div>
+					<div id="line6" class="showDiv">void hanoi ( int S, int D, int T, int n ) {</div>
+					<div id="line7" style="padding-left: 5%;" class="showDiv">if( n == 1 ) {</div>
+					<div id="line8" style="padding-left: 8%;" class="showDiv">printf( "Move from tower %d --&gt; %d", S, D );</div>
+					<div id="line9" style="padding-left: 8%;" class="showDiv">return ; }</div>
+					<div id="line10" style="padding-left: 5%; font-weight: bold;" class="showDiv">hanoi ( S, T, D, n-1 );</div>
+					<div id="line11" style="padding-left: 5%; font-weight: bold;" class="showDiv">printf( "Move from tower %d --&gt; %d", S, D );</div>
+					<div id="line12" style="padding-left: 5%; font-weight: bold;" class="showDiv">hanoi( T, D, S, n-1 );</div>
+					<div id="line13" style="padding-left: 5%; font-weight: normal;" class="showDivInRed">return ;</div>
+					<div id="line14" style="padding-left: 5%;">}</div>
+				</div><!-- end of codeLayout -->
+			</div><!-- end of stepExecutionDisplay -->
+		</div><!-- end of executionDivision -->
+			
+		<div class="outputDivision"> 
+			<div class="outputDivisionTitle"><div class="outputPic"></div><div class="outputText">Code Output</div></div>
+			<div class="resultDisplay" id="resultDisplay">
+				<div class="pillarFirst">
+					<div class="pillarBase"></div>
+					<div class="pillarLog"></div>
+					<div id="1"><div class="position1"></div><div class="position2"></div><div class="position3"></div><div class="position4"></div><div class="position5"></div></div>	
+				</div><!-- end of pillarFirst -->
+				<div class="pillarSecond">
+					<div class="pillarBase"></div>
+					<div class="pillarLog"></div>
+					<div id="2"><div class="position1 disk1"></div><div class="position2 disk2"></div><div class="position3 disk3"></div><div class="position4 disk4"></div><div class="position5 disk5"></div></div>
+				</div><!-- end of pillarSecond -->
+				<div class="pillarThird">
+					<div class="pillarBase"></div>
+					<div class="pillarLog"></div>
+					<div id="3"><div class="position1"></div><div class="position2"></div><div class="position3"></div><div class="position4"></div><div class="position5"></div></div>	
+				</div><!-- end of pillarThird -->
+				<div class="local">
+					<div>n :<div class="a" id="n">&nbsp;  3</div></div>
+					<div>S :<div class="a" id="s">&nbsp;  1</div></div>
+					<div>D :<div class="a" id="d">&nbsp;  2</div></div>
+					<div>T :<div class="a" id="t">&nbsp;  3</div></div>
+				</div>
+			</div><!-- end of resultDisplay -->
+		</div><!-- end of outputDivision -->
+	
+</body></html>
